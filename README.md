@@ -16,5 +16,16 @@ nuget restore
 ```
 3. Run the tests
 
-Use the .feature files to run the tests for better visualization.
+Use the <code>.feature</code> files to run the tests for better visualization.
 
+## Usage Instructions
+
+### Login info
+At the `appsettings.json file` there are the URL, username and password info.
+
+### Test execution options
+At the `specflow.actions.json` file there are some options for config the tests executions:
+
+- `browser` is set to Chrome, but there are other available options, such as Firefox and Chromium.
+- `--start-maximized` argument to maximize the browser window to the current screen size _(note that this argument is different for each chosen browser)_. 
+- `headless` set true to not to see the tests executions (the browser tabs won't open).
