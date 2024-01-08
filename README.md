@@ -21,7 +21,7 @@ Use the <code>.feature</code> files to run the tests for better visualization.
 ## Usage Instructions
 
 ### Login info
-At the `appsettings.json file` there are the URL, username and password info.
+At the `appsettings.json` file there are the URL, username and password info.
 
 ### Test execution options
 At the `specflow.actions.json` file there are some options for config the tests executions:
