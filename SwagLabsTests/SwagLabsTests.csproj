@@ -34,6 +34,8 @@
       <None Remove="runsettings.xml" />
       <None Remove="firefox.runsettings" />
       <None Remove="Drivers\**" />
+      <None Remove="playwrighrconfig.runsettings.xml" />
+      <None Remove="playwrightsettings.runsettings" />
     </ItemGroup>
 
     <ItemGroup>
