@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        
+        <RunSettingsFilePath>$(MSBuildProjectDirectory)\playwrightconfig.runsettings</RunSettingsFilePath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="TechTalk.SpecFlow"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0-preview-23577-04" />
+        <PackageReference Include="Microsoft.Playwright" Version="1.40.0" />
+        <PackageReference Include="nunit" Version="3.13.2"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.1.0"/>
+        <PackageReference Include="FluentAssertions" Version="7.0.0-alpha.3" />
+        <PackageReference Include="SpecFlow.Actions.Configuration" Version="0.1.350" />
+        <PackageReference Include="SpecFlow.Actions.Playwright" Version="0.1.285" />
+        <PackageReference Include="SpecFlow.NUnit" Version="4.0.31-beta" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="runsettings.xml" />
+      <None Remove="firefox.runsettings" />
+      <None Remove="Drivers\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Drivers\Driver.cs" />
+      <Compile Remove="Drivers\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <SpecFlowFeatureFiles Remove="Drivers\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Drivers\**" />
+    </ItemGroup>
+
+</Project>
